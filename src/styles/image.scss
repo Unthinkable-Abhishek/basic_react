@@ -1,0 +1,13 @@
+
+@import './mixins.scss';
+
+.image {
+    display: none;
+    
+    @include Breakpoint(tablet-landscape-up){
+        display: block;
+        width: 50%;
+        height: 600px;
+    }
+}
+  

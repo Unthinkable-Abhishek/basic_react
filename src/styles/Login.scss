@@ -1,0 +1,81 @@
+@import './mixins.scss';
+@import './themes/theme.scss';
+
+
+.login {
+    @include flex-col();
+}
+
+.message {
+    @include flex-col();
+    margin-bottom: 50px;
+
+    @include Breakpoint(phone-only){
+        @include flex-center();
+    }
+    @include Breakpoint(tablet-portrait-up){
+        @include flex-center();
+    }
+    @include Breakpoint(tablet-landscape-up){
+        @include flex-start();
+    }
+}
+
+.message :nth-child(2){
+    // color: var(--primary);
+    color: var(--secondary);
+}
+
+h1 {
+    margin:0;
+    padding:0;
+}
+
+.loginForm {
+    @include flex-col();
+    width: 350px;
+
+    @include Breakpoint(phone-only){
+        width: 300px;
+    }
+}
+
+#email {
+    margin-bottom: 25px;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid aliceblue;
+    padding: 5px;
+}
+input:focus {
+    outline: none;
+    border-bottom-color: gainsboro;
+}
+
+.forgotPassword {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+p{
+    font-size: small;
+}
+
+.loginBtn{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    background-color: var(--secondary);
+    border: none; 
+    color: white;
+    border-radius: 8px;
+    padding: 12px;
+    width: 200%;
+}
