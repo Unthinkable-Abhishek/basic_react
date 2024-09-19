@@ -41,11 +41,6 @@ const Form:  React.FC<Props> = (props) => {
                 {props.password && <input id='password' type={"password"} placeholder='Password' value={password} onChange={(e) => {setPassword(e.target.value)}}/>}
             </div>
 
-            <div>
-                {email && <p>{email}</p>}
-                {password && <p>{password}</p>}
-            </div>
-
             {props.forgotPassword && <div className='forgotPassword'>
                 <p><a style={{color: "black"}} href='/resetPassword'>Forgot password?</a></p>
             </div>}
